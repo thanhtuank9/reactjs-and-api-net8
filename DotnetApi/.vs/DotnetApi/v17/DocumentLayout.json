@@ -1,0 +1,210 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\hosted\\adminusercreationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:hosted\\adminusercreationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\models\\dbmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:models\\dbmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\models\\tokenresultviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:models\\tokenresultviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\models\\productmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:models\\productmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|e:\\workspace\\projects\\tuannt\\dotnet_reactjsapp\\dotnetapi\\dotnetapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}",
+      "RelativeMoniker": "D:0:0:{6C211076-C15E-4079-8146-8AA5587D4286}|DotnetApi.csproj|solutionrelative:dotnetapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DbModels.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Models\\DbModels.cs",
+              "RelativeDocumentMoniker": "Models\\DbModels.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Models\\DbModels.cs",
+              "RelativeToolTip": "Models\\DbModels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T12:00:39.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ApplicationDbContext.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T11:59:55.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DotnetApi",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\DotnetApi.csproj",
+              "RelativeDocumentMoniker": "DotnetApi.csproj",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\DotnetApi.csproj",
+              "RelativeToolTip": "DotnetApi.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-30T11:52:57.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAWwBIAAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T11:29:54.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAADgv0MAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T11:29:19.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TokenResultViewModel.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Models\\TokenResultViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\TokenResultViewModel.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Models\\TokenResultViewModel.cs",
+              "RelativeToolTip": "Models\\TokenResultViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T12:13:52.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAADwvxkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T11:27:42.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminUserCreationService.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Hosted\\AdminUserCreationService.cs",
+              "RelativeDocumentMoniker": "Hosted\\AdminUserCreationService.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Hosted\\AdminUserCreationService.cs",
+              "RelativeToolTip": "Hosted\\AdminUserCreationService.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAkwBcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T12:07:57.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-30T12:14:32.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginModel.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Models\\LoginModel.cs",
+              "RelativeToolTip": "Models\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T11:26:36.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductModels.cs",
+              "DocumentMoniker": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Models\\ProductModels.cs",
+              "RelativeDocumentMoniker": "Models\\ProductModels.cs",
+              "ToolTip": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\Models\\ProductModels.cs",
+              "RelativeToolTip": "Models\\ProductModels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T11:27:09.764Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
