@@ -18,6 +18,12 @@ const updateLocalAccessToken = (accessToken: string): void => {
 // Function to get refresh token from local storage
 const getLocalRefreshToken = (): string | null => localStorage.getItem('refreshToken');
 
+// Function to handle redirection to the login page
+const redirectToLogin = () => {
+  window.location.href = '/login';
+};
+
+
 api.interceptors.request.use((config: AxiosRequestConfig) => {
   const token = getAccessToken();
   if (token) {
@@ -35,13 +41,13 @@ api.interceptors.response.use(
     console.log(`Token: ${response}`);
     return response;
   },
-  async (error) => {
-    const originalRequest = error.config;
+  async (error) => {    
+    const { config, response } = error;
+    const originalRequest = config;
 
-    if (error.response) {
-      console.error('Response Error:', error.response.status, error.response.data);
-    } else {
-      console.error('Network Error:', error.message);
+    // Ignore the auth/login endpoint
+    if (originalRequest.url === '/auth/login') {
+      return Promise.reject(error);
     }
 
     // Access Token was expired
@@ -52,6 +58,7 @@ api.interceptors.response.use(
         const refreshToken = getLocalRefreshToken();
         if (!refreshToken) {
           // Handle scenario where refresh token is not available
+          redirectToLogin();
           return Promise.reject(error);
         }
 
@@ -66,6 +73,7 @@ api.interceptors.response.use(
 
         return api(originalRequest);
       } catch (_error) {
+        redirectToLogin();
         return Promise.reject(_error);
       }
     }
@@ -83,7 +91,7 @@ interface LoginResponse {
 }
 
 interface ErrorResponse {
-  httpStatusCode: number;
+  status: number;
   errorMessages: string;
 }
 
@@ -111,8 +119,7 @@ export const login = async (username: string, password: string): Promise<LoginRe
     console.log(`a => ${response.data}`);
     return response.data;
   } catch (error) {
-    // throw (error.response.data as ErrorResponse);
-    throw error.response ? error.response.data : error;
+    throw (error.response.data as ErrorResponse);
   }
 };
 
@@ -132,9 +139,7 @@ export const getProducts = async (keyword: string, pageSize: number, pageIndex: 
     });
     return response.data;
   } catch (error) {
-    //throw (error.response.data as ErrorResponse);
-    throw error.response ? error.response.data : error;
-
+    throw (error.response.data as ErrorResponse);
   }
 };
 

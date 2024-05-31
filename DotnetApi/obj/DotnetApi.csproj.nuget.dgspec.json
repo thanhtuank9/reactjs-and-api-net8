@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\DotnetApi.csproj": {}
+    "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\reactjs-and-api-net8\\DotnetApi\\DotnetApi.csproj": {}
   },
   "projects": {
-    "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\DotnetApi.csproj": {
+    "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\reactjs-and-api-net8\\DotnetApi\\DotnetApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\DotnetApi.csproj",
+        "projectUniqueName": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\reactjs-and-api-net8\\DotnetApi\\DotnetApi.csproj",
         "projectName": "DotnetApi",
-        "projectPath": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\DotnetApi.csproj",
+        "projectPath": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\reactjs-and-api-net8\\DotnetApi\\DotnetApi.csproj",
         "packagesPath": "C:\\Users\\thanh\\.nuget\\packages\\",
-        "outputPath": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\DotnetApi\\obj\\",
+        "outputPath": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\reactjs-and-api-net8\\DotnetApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

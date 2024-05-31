@@ -6,7 +6,7 @@ import CreateProductPage from './components/CreateProductPage';
 
 const App: React.FC = () => (
   <Routes>
-    <Route path="/" element={<LoginPage />} />
+    <Route path="/login" element={<LoginPage />} />
     <Route path="/products" element={<ProductsPage />} />
     <Route path="/create-product" element={<CreateProductPage />} />
   </Routes>

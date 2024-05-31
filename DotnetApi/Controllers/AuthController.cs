@@ -42,10 +42,10 @@ public partial class AuthController : ControllerBase
         var username = principal.Identity?.Name;
         var user = await _context.Users.FirstOrDefaultAsync(r => r.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
 
-        if (user == null || !user.RefreshToken.Equals(model.RefreshToken, StringComparison.InvariantCultureIgnoreCase) || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
-        {
-            return BadRequest(new { message = "Invalid token" });
-        }
+        //if (user == null || !user.RefreshToken.Equals(model.RefreshToken, StringComparison.InvariantCultureIgnoreCase) || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+        //{
+        //    return BadRequest(new { message = "Invalid token" });
+        //}
 
         var tokenResult = await GenerateJwtTokens(user);
         return Ok(tokenResult);

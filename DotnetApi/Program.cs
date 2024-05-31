@@ -53,6 +53,17 @@ builder.Services.AddCors(options =>
         });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5173")
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -64,11 +75,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Use CORS policy
+app.UseCors("AllowAllOrigins");
+app.UseCors("AllowSpecificOrigins");
+
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Use CORS policy
-app.UseCors("AllowAllOrigins");
 
 app.MapControllers();
 
