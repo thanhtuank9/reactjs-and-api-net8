@@ -1,5 +1,7 @@
 ﻿using DotnetApi;
+using DotnetApi.Entities;
 using DotnetApi.Models;
+using DotnetApi.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,7 +41,7 @@ public class ProductController : ControllerBase
 
     [HttpPost]
     [Authorize]
-    public IActionResult CreateProduct([FromBody] ProductRequest request)
+    public IActionResult CreateProduct([FromBody] ProductCreateRequest request)
     {
         if (string.IsNullOrEmpty(request.ProductName) || request.Quantity <= 0)
         {
@@ -55,7 +57,7 @@ public class ProductController : ControllerBase
         _context.Products.Add(product);
         _context.SaveChanges();
 
-        return Ok(new ProductResponse
+        return Ok(new ProductCreateResponse
         {
             Success = true,
             ProductId = product.Id

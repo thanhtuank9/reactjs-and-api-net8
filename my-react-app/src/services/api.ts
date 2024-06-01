@@ -32,21 +32,24 @@ api.interceptors.request.use((config: AxiosRequestConfig) => {
   return config;
 },
 (error) => {
-  console.error('Request Error:', error);
   return Promise.reject(error);
 });
 // Function to handle access token expiration and refresh
 api.interceptors.response.use(
   (response: AxiosResponse) => {
-    console.log(`Token: ${response}`);
     return response;
   },
   async (error) => {    
+    console.log("interceptors Error: " + error);
     const { config, response } = error;
     const originalRequest = config;
+    
+    if(error.code === 'ERR_NETWORK'){
+      return Promise.reject({response: {data: {'status': 500, 'errorMessages' : error.message}}});
+    }
 
     // Ignore the auth/login endpoint
-    if (originalRequest.url === '/auth/login') {
+    if (originalRequest.url.indexOf('/auth/login') >= 0) {
       return Promise.reject(error);
     }
 
@@ -116,7 +119,6 @@ interface CreateProductResponse {
 export const login = async (username: string, password: string): Promise<LoginResponse> => {
   try {
     const response = await api.post<LoginResponse>('/auth/login', { username, password });
-    console.log(`a => ${response.data}`);
     return response.data;
   } catch (error) {
     throw (error.response.data as ErrorResponse);

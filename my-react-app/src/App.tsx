@@ -1,15 +1,16 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route , Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
-import ProductsPage from './pages/ProductsPage';
-import CreateProductPage from './components/CreateProductPage';
+import Dashboard from './pages/Dashboard';
+import PrivateRoute from './components/PrivateRoute';
+import { isAuthenticated } from './utils/auth';
 
 const App: React.FC = () => (
-  <Routes>
-    <Route path="/login" element={<LoginPage />} />
-    <Route path="/products" element={<ProductsPage />} />
-    <Route path="/create-product" element={<CreateProductPage />} />
-  </Routes>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/*" element={<PrivateRoute element={<Dashboard />} />} />
+        <Route path="/" element={<Navigate to={isAuthenticated() ? "/products" : "/login"} replace />} />
+      </Routes>
 );
 
 export default App;

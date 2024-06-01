@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sitkfQkBsq4=",
+  "dgSpecHash": "1du2S+TTlgo=",
   "success": true,
-  "projectFilePath": "E:\\Workspace\\Projects\\TuanNT\\Dotnet_ReactJsApp\\reactjs-and-api-net8\\DotnetApi\\DotnetApi.csproj",
+  "projectFilePath": "D:\\Working\\Projects\\Personal\\reactjs-and-api-net8\\DotnetApi\\DotnetApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thanh\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.6\\microsoft.aspnetcore.authentication.jwtbearer.8.0.6.nupkg.sha512",
     "C:\\Users\\thanh\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",

@@ -1,7 +1,6 @@
-﻿namespace DotnetApi.Models
+﻿namespace DotnetApi.Entities
 {
-    // Models/User.cs
-    public class User
+    public record User
     {
         public int Id { get; set; }
         public string Username { get; set; }
@@ -11,13 +10,4 @@
         public DateTime RefreshTokenExpiryTime { get; set; }
         public string RefreshToken { get; set; }
     }
-
-    // Models/Product.cs
-    //public class Product
-    //{
-    //    public int Id { get; set; }
-    //    public string ProductName { get; set; }
-    //    public int Quantity { get; set; }
-    //}
-
 }

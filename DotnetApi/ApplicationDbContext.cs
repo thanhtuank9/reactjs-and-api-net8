@@ -1,4 +1,4 @@
-﻿using DotnetApi.Models;
+﻿using DotnetApi.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotnetApi

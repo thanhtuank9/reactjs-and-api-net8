@@ -3,7 +3,6 @@ import LoginForm from '../components/LoginForm';
 
 const LoginPage: React.FC = () => (
   <div>
-    <h1>Login Page</h1>
     <LoginForm />
   </div>
 );

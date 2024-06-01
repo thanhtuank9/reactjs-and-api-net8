@@ -26,17 +26,19 @@ const ProductList: React.FC = () => {
 
   return (
     <div>
-      <Link to="/create-product">Create New Product</Link>
       <h2>Product List</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <table className='styled-table'>
         <tbody>
+          <tr>
+          <td className='text-bold'>Product Name</td>
+            <td className='text-bold'>Quantity</td>
+          </tr>
         {products.map(product => (
-          <tr className='{product.id}'>
+          <tr key={product.id} className='{product.id}'>
             <td>{product.productName}</td>
             <td>{product.quantity}</td>
           </tr>
-          // <li key={product.id}>{product.productName} - {product.quantity}</li>
         ))}
         </tbody>
       </table>

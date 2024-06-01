@@ -1,5 +1,7 @@
 ﻿using DotnetApi;
+using DotnetApi.Entities;
 using DotnetApi.Models;
+using DotnetApi.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -42,10 +44,10 @@ public partial class AuthController : ControllerBase
         var username = principal.Identity?.Name;
         var user = await _context.Users.FirstOrDefaultAsync(r => r.Username.Equals(username, StringComparison.OrdinalIgnoreCase));
 
-        //if (user == null || !user.RefreshToken.Equals(model.RefreshToken, StringComparison.InvariantCultureIgnoreCase) || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
-        //{
-        //    return BadRequest(new { message = "Invalid token" });
-        //}
+        if (user == null || !user.RefreshToken.Equals(model.RefreshToken, StringComparison.InvariantCultureIgnoreCase) || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+        {
+            return BadRequest(new { message = "Invalid token due to token expires or wrong token" });
+        }
 
         var tokenResult = await GenerateJwtTokens(user);
         return Ok(tokenResult);
@@ -59,8 +61,8 @@ public partial class AuthController : ControllerBase
         {
             Subject = new ClaimsIdentity(new[]
             {
-                    new Claim(ClaimTypes.Name, user.Username),
-                    new Claim(ClaimTypes.Role, "Admin") // Example role
+                    new Claim(UserClaim.USERNAME, user.Username),
+                    new Claim(UserClaim.USER_ID, user.Id.ToString())
                 }),
             Expires = DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["Jwt:TokenExpirationMinutes"])),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

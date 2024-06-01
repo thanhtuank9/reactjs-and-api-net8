@@ -1,4 +1,5 @@
 using DotnetApi;
+using DotnetApi.Users;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -12,6 +13,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Register the hosted service
 builder.Services.AddHostedService<AdminUserCreationService>();
+
+builder.Services.AddHttpContextAccessor();
+// builder.Services.AddScoped<UserContext>();
 
 // Add services to the container.
 builder.Services.AddControllers();

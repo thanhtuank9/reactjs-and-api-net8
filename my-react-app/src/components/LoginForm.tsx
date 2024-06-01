@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login, register } from '../services/api';
+import { login } from '../services/api';
+import '../assets/login.css';
+
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState<string>('');
@@ -16,14 +18,15 @@ const LoginForm: React.FC = () => {
       localStorage.setItem('refreshToken', data.refreshToken);
       navigate('/products');
     } catch (err) {
+      console.log(err);
       setError(err.errorMessages);
     }
   };
 
   return (
-    <div>
+    <div className='login-container'>
       <form onSubmit={handleLogin}>
-        <h2>Login</h2>
+        <h2>Login</h2> <i>(admin / admin)</i>
         {error && <p style={{ color: 'red' }}>{error}</p>}
         <div>
           <label>Username:</label>

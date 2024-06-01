@@ -9,6 +9,10 @@ body {
   height: 100vh;
 }
 
+body #root {
+  width: 100%;
+}
+
 .container {
   background-color: #fff;
   padding: 20px;
@@ -17,6 +21,8 @@ body {
   width: 100%;
   max-width: 400px;
 }
+
+
 
 h1, h2 {
   color: #333;
@@ -61,7 +67,7 @@ ul {
 
 li {
   padding: 10px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   margin-bottom: 10px;
   border-radius: 4px;
 }
@@ -76,12 +82,17 @@ li {
   margin-bottom: 15px;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
 .styled-table {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
+  width: 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .styled-table thead tr {
@@ -110,4 +121,10 @@ li {
 .styled-table tbody tr.active-row {
   font-weight: bold;
   color: #009879;
+}
+
+.create-product-container {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
 }

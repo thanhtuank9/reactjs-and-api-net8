@@ -1,6 +1,5 @@
 ﻿using DotnetApi;
-using DotnetApi.Models;
-using Microsoft.AspNetCore.Identity;
+using DotnetApi.Entities;
 
 public class AdminUserCreationService : IHostedService
 {
@@ -22,7 +21,7 @@ public class AdminUserCreationService : IHostedService
             {
                 Id = 1,
                 Username = "admin",
-                Password = "password",
+                Password = "admin",
                 RefreshToken = string.Empty,
                 RefreshTokenExpiryTime = DateTime.MinValue
             };
