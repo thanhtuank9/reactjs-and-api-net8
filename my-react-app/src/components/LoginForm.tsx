@@ -14,12 +14,22 @@ const LoginForm: React.FC = () => {
     e.preventDefault();
     try {
       const data = await login(username, password);
-      localStorage.setItem('accessToken', data.accessToken);
-      localStorage.setItem('refreshToken', data.refreshToken);
-      navigate('/products');
+      if(data.status == 0){ 
+        localStorage.setItem('accessToken', data.data.accessToken);
+        localStorage.setItem('refreshToken', data.data.refreshToken);
+        navigate('/products');
+      } else if(data.status == -1){
+        // Do something ...
+        setError(data.detail);
+      } else if(data.status == -2){
+        // Do something ...
+        setError(data.detail);
+      }
+      else { // TODO : check more statuses  here ....
+        setError(data.detail);
+      }
     } catch (err) {
-      console.log(err);
-      setError(err.errorMessages);
+      setError(err.detail);
     }
   };
 

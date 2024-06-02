@@ -1,11 +1,22 @@
 using DotnetApi;
-using DotnetApi.Users;
+using DotnetApi.ActionFilters;
+using DotnetApi.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(typeof(CustomValidationFilter));
+})
+.ConfigureApiBehaviorOptions(options =>
+{
+    options.SuppressModelStateInvalidFilter = true; // Disable automatic model validation
+});
 
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -68,6 +79,9 @@ builder.Services.AddCors(options =>
         });
 });
 
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -88,5 +102,6 @@ app.UseAuthorization();
 
 
 app.MapControllers();
+app.UseExceptionHandler();
 
 app.Run();

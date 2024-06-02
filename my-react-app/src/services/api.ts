@@ -45,7 +45,7 @@ api.interceptors.response.use(
     const originalRequest = config;
     
     if(error.code === 'ERR_NETWORK'){
-      return Promise.reject({response: {data: {'status': 500, 'errorMessages' : error.message}}});
+      return Promise.reject({response: {data: {'status': -1, 'detail' : error.message}}});
     }
 
     // Ignore the auth/login endpoint
@@ -70,10 +70,14 @@ api.interceptors.response.use(
           refreshToken,
         });
 
-        debugger;
-        const { accessToken } = rs.data;
-        updateLocalAccessToken(accessToken);
+        // need to check more with status (TODO)
+        if(rs.data.status !== 1){
+          return Promise.reject(error);
+        }
 
+        const { accessToken } = rs.data.data;
+        updateLocalAccessToken(accessToken);
+  
         return api(originalRequest);
       } catch (_error) {
         redirectToLogin();
@@ -88,14 +92,24 @@ api.interceptors.response.use(
 // Export instance for use in other parts of the application
 export default api;
 
-interface LoginResponse {
+interface ApiResponse {
+  status: number;
+  data: object
+}
+
+interface LoginResponse  {
   accessToken: string;
   refreshToken: string;
 }
 
+interface CreateProductResponse {
+  success: boolean;
+  productId: number;
+}
+
 interface ErrorResponse {
-  status: number;
-  errorMessages: string;
+  status: number; // debpends on api
+  detail: string; // message
 }
 
 interface Product {
@@ -111,23 +125,11 @@ interface GetProductsResponse {
   pageIndex: number;
 }
 
-interface CreateProductResponse {
-  success: boolean;
-  productId: number;
-}
 
-export const login = async (username: string, password: string): Promise<LoginResponse> => {
-  try {
-    const response = await api.post<LoginResponse>('/auth/login', { username, password });
-    return response.data;
-  } catch (error) {
-    throw (error.response.data as ErrorResponse);
-  }
-};
 
-export const register = async (username: string, password: string): Promise<{ Status: string }> => {
+export const login = async (username: string, password: string): Promise<ApiResponse> => {
   try {
-    const response = await api.post<{ Status: string }>('/auth/register', { username, password });
+    const response = await api.post<ApiResponse>('/auth/login', { username, password });
     return response.data;
   } catch (error) {
     throw (error.response.data as ErrorResponse);
@@ -145,9 +147,9 @@ export const getProducts = async (keyword: string, pageSize: number, pageIndex: 
   }
 };
 
-export const createProduct = async (productName: string, quantity: number): Promise<CreateProductResponse> => {
+export const createProduct = async (productName: string, quantity: number): Promise<ApiResponse> => {
   try {
-    const response = await api.post<CreateProductResponse>('/products', { productName, quantity });
+    const response = await api.post<ApiResponse>('/products', { productName, quantity });
     return response.data;
   } catch (error) {
     throw (error.response.data as ErrorResponse);

@@ -10,11 +10,20 @@ const CreateProductForm: React.FC = () => {
     e.preventDefault();
     try {
       const data = await createProduct(productName, quantity);
-      if (data.success) {
+      if (data.status === 0 ) { // TODO : check more statuses  here ....
+        console.log('Log: ' + data.data);
         setMessage('Product created successfully');
+      } else if(data.status == -1){
+        // Do something ...
+        setMessage(data.detail);
+      } else if(data.status == -2){
+        // Do something ...
+        setMessage(data.detail);
+      } else {
+        setMessage(data.detail);
       }
     } catch (err) {
-      setMessage(err.errorMessages);
+      setMessage(err.detail);
     }
   };
 

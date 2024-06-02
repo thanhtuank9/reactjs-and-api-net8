@@ -1,9 +1,13 @@
 ﻿using DotnetApi;
 using DotnetApi.Entities;
+using DotnetApi.Enums;
+using DotnetApi.Exceptions;
 using DotnetApi.Models;
+using DotnetApi.Responses;
 using DotnetApi.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 [ApiController]
 [Route("products")]
@@ -45,7 +49,7 @@ public class ProductController : ControllerBase
     {
         if (string.IsNullOrEmpty(request.ProductName) || request.Quantity <= 0)
         {
-            return BadRequest(new { HttpStatusCode = 400, ErrorMessages = "Bad data" });
+            throw new ApiResponseException("Bad Data", (int)ProductStatus.BadData);
         }
 
         var product = new Product
@@ -57,10 +61,16 @@ public class ProductController : ControllerBase
         _context.Products.Add(product);
         _context.SaveChanges();
 
-        return Ok(new ProductCreateResponse
+        var productResponse = new ProductCreateResponse
         {
             Success = true,
             ProductId = product.Id
+        };
+
+        return Ok(new ApiResponse<ProductCreateResponse>
+        {
+            Data = productResponse,
+            Status = (int)ProductStatus.Success
         });
     }
 }

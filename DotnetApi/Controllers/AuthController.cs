@@ -1,8 +1,10 @@
 ﻿using DotnetApi;
 using DotnetApi.Entities;
+using DotnetApi.Enums;
+using DotnetApi.Exceptions;
 using DotnetApi.Models;
+using DotnetApi.Responses;
 using DotnetApi.Users;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -31,10 +33,15 @@ public partial class AuthController : ControllerBase
         {
             var token = await GenerateJwtTokens(user);
 
-            return Ok(token);
+
+            return Ok(new ApiResponse<TokenResultViewModel>
+            {
+                Status = (int)UserAuthStatus.LoggedInSuccess,
+                Data = token
+            });
         }
 
-        return Unauthorized(new { HttpStatusCode = 401, ErrorMessages = "Wrong password/username" });
+        throw new ApiResponseException("Wrong password/username", (int)UserAuthStatus.WrongUserNamePassword);
     }
 
     [HttpPost("refresh")]
@@ -49,8 +56,13 @@ public partial class AuthController : ControllerBase
             return BadRequest(new { message = "Invalid token due to token expires or wrong token" });
         }
 
-        var tokenResult = await GenerateJwtTokens(user);
-        return Ok(tokenResult);
+        var token = await GenerateJwtTokens(user);
+
+        return Ok(new ApiResponse<TokenResultViewModel>
+        {
+            Status = (int)UserAuthStatus.RefreshTokenSuccess,
+            Data = token
+        });
     }
 
     private async Task<TokenResultViewModel> GenerateJwtTokens(User user)

@@ -18,7 +18,7 @@ const ProductList: React.FC = () => {
         const data = await getProducts('', 10, 1);
         setProducts(data.products);
       } catch (err) {
-        setError(err.errorMessages);
+        setError(err.detail);
       }
     };
     fetchProducts();
